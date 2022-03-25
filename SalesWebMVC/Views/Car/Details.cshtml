@@ -1,0 +1,43 @@
+﻿@model SalesWebMVC.Models.Car
+
+@{
+  ViewData["Title"] = "Detalhes";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+  <h4>Carro</h4>
+  <hr />
+  <dl class="dl-horizontal">
+    <dt>
+      @Html.DisplayNameFor(x => x.Nome)
+    </dt>
+    <dd>
+      @Html.DisplayFor(x => x.Nome)
+    </dd>
+    <dt>
+      @Html.DisplayNameFor(x => x.Modelo)
+    </dt>
+    <dd>
+      @Html.DisplayFor(x => x.Modelo)
+    </dd>
+    <dt>
+      @Html.DisplayNameFor(x => x.Cor)
+    </dt>
+    <dd>
+      @Html.DisplayFor(x => x.Cor)
+    </dd>
+    <dt>
+      @Html.DisplayNameFor(x => x.Ano)
+    </dt>
+    <dd>
+      @Html.DisplayFor(x => x.Ano)
+    </dd>
+  </dl>
+</div>
+
+<div>
+  <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-default">Editar</a>
+  <a asp-action="Index">Voltar</a>
+</div>
